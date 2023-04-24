@@ -8,4 +8,5 @@ urlpatterns = [
     path('hello/adam/', views.adam),
 
     path('hello/<str:data>/', views.name),
+    path('hello2/', views.hello2),
     ]

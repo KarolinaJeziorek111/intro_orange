@@ -23,3 +23,8 @@ def name(request, data):
 # Xss - podatność xss
 #
 
+def hello2(request):
+    return render(
+        request,
+        'next_app/hello.html'
+)
