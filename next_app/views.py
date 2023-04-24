@@ -28,3 +28,13 @@ def hello2(request):
         request,
         'next_app/hello.html'
 )
+
+
+def name2(request, data):
+    return render(
+        request,
+        'name.html',
+        context={
+            "data": data
+        }
+    )
