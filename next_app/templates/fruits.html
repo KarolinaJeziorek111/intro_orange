@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- Komentarz html -->
+    {# {% skdjcbn %} Komentarz jednolinijkowy DTL (Django Template Language) #}
+    {% comment %}
+        Komentarz wielolinijkowy DTL
+    {% endcomment %}
+    <ul>
+    {% for item in fruits %}
+        <li>{{ forloop.counter }} - {{ item }}</li>
+    {% endfor %}
+    </ul>
+
+    <!-- Wyszukiwanie (lookup) po kluczu -->
+    <!-- Wrtość pod kluczem age -->
+    <p>{{ person.age }}</p>
+
+    <!-- Wyszukiwanie (lookup) po nazwie atrybutu/metody -->
+    <!-- atrybut name -->
+    <p>{{ cow.name }}</p>
+
+    <!-- Wyszukiwanie (lookup) po indeksie -->
+    <!-- Drugi element (o indeksie 1) z listy -->
+    <p>{{ fruits.1 }}</p>
+
+<!--filtry-->
+    <p>{{ fruits | length }}</p>
+    <p>{{ fruits | join:", " }}</p>
+    <p>{{fruits | upper }}</p>
+    <p>{{fruits | cut:"a" }}</p>
+
+
+</body>
+</html>
