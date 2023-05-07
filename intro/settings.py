@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'next_app.apps.NextAppConfig',
     'links.apps.LinksConfig',
     'inheritance.apps.InheritanceConfig',
+    'form_app.apps.FormAppConfig',
+    'form_app2.apps.FormApp2Config',
 
 ]
 
