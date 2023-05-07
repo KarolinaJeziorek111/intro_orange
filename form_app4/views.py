@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-TASKS = []
+
 
 
 def task_create_view(request):
@@ -13,16 +13,27 @@ def task_create_view(request):
     if request.method == "POST":
         task = request.POST.get('task')
         if task:
-            TASKS.append(task)
+
+            # zapisa do pliku
+            with open('tasks.txt', 'a+') as f:
+                f.write(task + "\n")
+
+
 
         return redirect("form_app4:task_list_view")
 
 
 def task_list_view(request):
+
+    # odczyt z pliku
+
+    with open('tasks.txt', 'r') as f:
+        tasks = f.readlines()
+
     return render(
         request,
         'form_app4/task_list.html',
         context={
-            'tasks': TASKS,
+            'tasks': tasks,
         }
     )
