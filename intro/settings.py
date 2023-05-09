@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #build-in apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3-rd part app
+    'django_extensions',
 
+    #local apps
     'hello.apps.HelloConfig',
     'next_app.apps.NextAppConfig',
     'links.apps.LinksConfig',
