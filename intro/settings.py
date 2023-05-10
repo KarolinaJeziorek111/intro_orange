@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django_extensions',
 
     # local apps
-    'helo.apps.HeloConfig',
+    'hello.apps.HelloConfig',
     'next_app.apps.NextAppConfig',
     'links.apps.LinksConfig',
     'inheritance.apps.InheritanceConfig',

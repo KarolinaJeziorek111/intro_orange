@@ -1,4 +1,5 @@
 from django.db import models
+from django.db import models
 
 
 # One-to-one (O2O)
@@ -16,6 +17,7 @@ class Language(models.Model):
     name = models.CharField(max_length=100)
     # framework_set =  # automatycznie dorobiony przez django menadżer powiązany
 
+
 class Framework(models.Model):
     name = models.CharField(max_length=100)
     language = models.ForeignKey('Language', on_delete=models.CASCADE)
@@ -23,8 +25,9 @@ class Framework(models.Model):
 
 
 class Actor(models.Model):
-    name = models.Charfield(max_length=100)
-
+    name = models.CharField(max_length=100)
+    # movie_set  # automatycznie dorobiony przez django menadżer powiązany
 
 class Movie(models.Model):
-    title=models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    actors = models.ManyToManyField('Actor')  # i to też jest menadżer powiązany
