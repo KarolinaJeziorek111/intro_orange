@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g)ndu#vc*0wxdo35u($psi9df%h(0k@%hpo*)pocfv478^9gjb'
+SECRET_KEY = 'django-insecure-jc!54jpho7v3blc0_!#g^lsrso1i0-%g3(yy1p-s^pzfdxok6h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    #build-in apps
+    # build-in apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 3-rd part app
+    # 3-rd part apps
     'django_extensions',
 
-    #local apps
-    'hello.apps.HelloConfig',
+    # local apps
+    'helo.apps.HeloConfig',
     'next_app.apps.NextAppConfig',
     'links.apps.LinksConfig',
     'inheritance.apps.InheritanceConfig',
@@ -53,8 +53,7 @@ INSTALLED_APPS = [
     'form_app4.apps.FormApp4Config',
     'form_app5.apps.FormApp5Config',
     'crud_app.apps.CrudAppConfig',
-
-
+    'relations_app.apps.RelationsAppConfig',
 ]
 
 MIDDLEWARE = [
